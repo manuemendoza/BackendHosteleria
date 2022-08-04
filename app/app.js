@@ -12,6 +12,10 @@ app.use(function(req, res, next) {
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.status(200).send('chanchito feliz');
+});
+
 app.get('/coffee', (req, res) => res.send('So sorry', 418));
 
 app.listen(process.env.PORT, () => console.log('El servidor esta levantado en ,', process.env.PORT));
