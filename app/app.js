@@ -1,6 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 
+const database = require('./services/mongoose');
+
+database();
+
 const app = express();
 
 app.use(function(req, res, next) {
